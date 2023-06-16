@@ -1,7 +1,7 @@
-html{
+*{
     box-sizing: border-box;
 }
-*{
+html{
     font-size: 62.5%;
 }
 body{
@@ -131,7 +131,6 @@ header{
 .header-action--btn{
     min-width: 104px;
     --hight:44px;
-    font-size: 1.6rem;
 }
 /* ==============hero============ */
 .hero{
@@ -155,10 +154,40 @@ header{
     font-size: 1.8rem;
     line-height: 1.67;
     color: #C9D2DA;
+    padding: 22px 0 38px;
+}
+.hero__content--row{
+    display: flex;
+    align-items: center;
 }
 .hero__content--phone{
+    white-space: nowrap;
     color: var(--text-color);
     font-weight: 400;
     font-size: 1.8rem;
     line-height: 1.67;
+    margin-left: 38px
+}
+.hero__media{
+    flex-grow: 1;
+}
+.hero__image{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.hero__image--left{
+    height: 540px;
+    width: 330px;
+    border-radius: 6px;
+    object-fit: cover;
+    margin-right: -6px;
+    z-index: 1;
+}
+.hero__image--right{
+    width: 210px;
+    height: 410px;
+    object-fit: cover;
+    border-radius: 0px 6px 6px 0px;
+    object-position: 80% center;
 }
