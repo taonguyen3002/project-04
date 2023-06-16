@@ -1,6 +1,135 @@
 html{
-    font-family: 'Sora', sans-serif;
+    box-sizing: border-box;
 }
 *{
     font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: 'Sora', sans-serif;
+}
+:root{
+    --header-bg:#10375c;
+    --text-color:#fff;
+    --primary-color:#2E80CE;
+}
+/* =========================================== */
+.container{
+    width: 1170px;
+    max-width: calc(100% - 48px);
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.btn{
+    min-width: 205px;
+    display: inline-block;
+    --height: 60px;
+    background: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 99px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1.8rem;
+    line-height: var(--height);
+    padding: 0 20px;
+    border: 1px solid var(--primary-color);
+}
+.btn:hover{
+    opacity: 0.9;
+    cursor: pointer;
+}
+/* ==================header=================== */
+header{
+    padding-top: 30px;
+    min-height: 100vh;
+    background: var(--header-bg);
+}
+.header-top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+/* ============logo================ */
+.logo{
+    display: inline-flex;
+    position: relative;
+    font-size: 1rem;
+}
+.logo__circle::after,
+.logo__circle::before{
+    content: "";
+    display: inline-block;
+    border-radius: 50%;
+
+}
+.logo__circle::before{
+    width: 3em;
+    height: 3em;
+    background: #2E80CE;
+}
+.logo__circle::after{
+    position: absolute;
+    width: 1.6em;
+    height: 1.6em;
+    background-color: #fff;
+    left: 1.1em;
+    top: 1.1em;
+}
+.logo__text{
+    color: var(--text-color);
+    margin-left: 0.6em;
+    text-align: right;
+    line-height: 1.6em;
+}
+.logo__brand{
+    display: block;
+    font-weight: 400;
+    font-size: 1.8em;
+}
+.logo__brand:last-child{
+    font-weight: 300;
+    font-size: 1.2em;
+}
+/* ========================================navbar===================== */
+.navbar__list{
+    display: flex;
+}
+.action--login,
+.navbar__link{
+    font-weight: 300;
+    font-size: 1.6rem;
+    color: #C9D2DA;
+    padding: 4px 21px;
+}
+.navbar__link:hover,
+.navbar--active{
+    text-shadow: 1px 0 0 currentColor;
+    color: var(--text-color);
+}
+.navbar--active::before{
+    position: relative;
+    display: inline-block;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    left: -8px;
+    top:-6px;
+    background: #fff;
+}
+/* ================action============= */
+.action{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action--btn{
+    min-width: 104px;
+    --hight:44px;
+    font-size: 1.6rem;
 }
